@@ -9,7 +9,7 @@ from voice_assistant.transcription import transcribe_audio
 from voice_assistant.response_generation import generate_response
 from voice_assistant.text_to_speech import text_to_speech
 from voice_assistant.utils import delete_file
-from voice_assistant.config import Config
+from config.config import Config
 from voice_assistant.api_key_manager import get_transcription_api_key, get_response_api_key, get_tts_api_key
 import websocket
 import threading
