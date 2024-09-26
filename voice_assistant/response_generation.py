@@ -6,7 +6,7 @@ from openai import OpenAI
 from groq import Groq
 import ollama
 
-from config.config import Config
+from voice_assistant.config import Config
 
 
 def generate_response(model:str, api_key:str, chat_history:list, local_model_path:str=None):

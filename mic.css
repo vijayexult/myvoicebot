@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+#connect, #disconnect, #micButton {
+    border: none;
+    padding: 15px 25px; /* Padding adjusted for better spacing */
+    color: white;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Font size for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#disconnect {
+    background-color: #e74c3c; /* Slightly darker red */
+}
+
+#connect {
+    background-color: #2ecc71; /* Slightly darker green */
+    font-weight: bold;
+}
+
+#micButton {
+    background-color: #3498db; /* Blue color for the mic button */
+    width: 70px; /* Fixed width for the mic button */
+    height: 70px; /* Fixed height for the mic button */
+    border-radius: 50%; /* Make it round */
+    font-size: 30px; /* Larger font size for the mic icon */
+    display: flex; /* Center the icon */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+}
+
+#connect:hover, #disconnect:hover, #micButton:hover {
+    cursor: pointer;
+    opacity: 0.8; /* Slightly fade on hover */
+}
+
+.container2 p {
+    font-size: 45px;
+    background-color: #2ecc71; /* Slightly darker green */
+    padding: 20px 0px;
+    width: 90px;
+    color: white;
+    border-radius: 50%;
+}
+
+.message-window {
+    margin-top: 20px; /* Spacing above the message window */
+    padding: 10px;
+    background-color: #f0f0f0; /* Light grey for the message window */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for the message window */
+    max-height: 150px; /* Set a maximum height */
+    overflow-y: auto; /* Allow scrolling */
+    width: 90%; /* Set width for the message window */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.response-text {
+    margin-top: 10px; /* Spacing above the response text */
+    padding: 10px;
+    background-color: #d9edf7; /* Light blue for the response text */
+    border: 1px solid #bce8f1; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    max-height: 100px; /* Set a maximum height */
+    overflow-y: auto; /* Allow scrolling */
+    width: 90%; /* Set width for the response text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Optional: Add a responsive design */
+@media (max-width: 600px) {
+    #connect, #disconnect, #micButton {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px 20px; /* Adjust padding */
+    }
+    #micButton {
+        width: 60px; /* Smaller width for mobile */
+        height: 60px; /* Smaller height for mobile */
+        font-size: 24px; /* Smaller font size for the mic icon */
+    }
+}

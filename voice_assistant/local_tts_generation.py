@@ -1,5 +1,5 @@
 import requests
-from config.config import Config
+from voice_assistant.config import Config
 
 
 def generate_audio_file_melotts(text, language='EN', accent='EN-US', speed=1.0, filename=None):

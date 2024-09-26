@@ -6,7 +6,7 @@ from voice_assistant.transcription import transcribe_audio
 from voice_assistant.response_generation import generate_response
 from voice_assistant.text_to_speech import text_to_speech
 from voice_assistant.utils import delete_file
-from config.config import Config
+from voice_assistant.config import Config
 from voice_assistant.api_key_manager import get_transcription_api_key, get_response_api_key, get_tts_api_key
 import time  # For measuring response time
 
@@ -87,7 +87,6 @@ async def handle_client(websocket, path):
     while True:
         try:
             # Receive the audio data from the client
-            start_time = time.perf_counter()  # Start the timer
             audio_data = await websocket.recv()
             logging.info("Audio data received from client.")
 
@@ -130,11 +129,6 @@ async def handle_client(websocket, path):
 
             # Clean up
             delete_file(output_file)
-
-            # Measure total response time
-            end_time = time.perf_counter()
-            total_response_time = end_time - start_time
-            logging.info(f"Total response time: {total_response_time:.3f} seconds")
 
         except websockets.ConnectionClosed:
             logging.info("Client disconnected.")

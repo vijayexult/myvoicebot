@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant</title>
+    <link rel="stylesheet" href="mic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+           
+       
+</head>
+<body>
+    <div class="container">
+        <div class="container3">
+            <button id="connect" aria-label="Connect to WebSocket server">Connect</button>
+            <button id="disconnect" disabled aria-label="Disconnect from WebSocket server">Disconnect</button>
+        </div>
+        <center>
+            <button id="micButton" aria-label="Start recording">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </center>
+        <div id="messageWindow" class="message-window"></div>
+        <textarea id="responseText" placeholder="Assistant's response will appear here..." readonly></textarea>
+        <div id="loadingIndicator" style="display: none;">Processing...</div>
+    </div>
+    <script src="mic.js"></script>
+</body>
+</html>

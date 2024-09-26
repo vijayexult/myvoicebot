@@ -1,6 +1,6 @@
 # voice_assistant/api_key_manager.py
 
-from config.config import Config
+from voice_assistant.config import Config
 
 API_KEY_MAPPING= {
     "transcription":{
